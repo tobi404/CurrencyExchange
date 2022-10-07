@@ -9,6 +9,7 @@ import UIKit
 import RxSwift
 import RxRelay
 import Factory
+import CEDomain
 
 @MainActor
 final class CurrencyPickerViewModel: NSObject {
@@ -26,7 +27,7 @@ final class CurrencyPickerViewModel: NSObject {
     // MARK: - Exposed Methods
     func configureDataSource(tableView: UITableView) {
         dataSource = CurrencyPickerTableViewDataSource(tableView: tableView) { tableView, indexPath, itemIdentifier in
-            guard let cell = tableView.dequeueReusableCell(withIdentifier: CPCurrencyCell.identifier, for: indexPath) as? CPCurrencyCell else { return nil }
+            guard let cell = tableView.dequeueReusableCell(withIdentifier: CPCurrencyCell.identifier, for: indexPath) as? CPCurrencyCell else { fatalError("Cell should be registered properly") }
             cell.configure(with: itemIdentifier)
             return cell
         }

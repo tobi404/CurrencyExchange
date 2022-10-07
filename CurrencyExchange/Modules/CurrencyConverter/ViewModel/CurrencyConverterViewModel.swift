@@ -7,6 +7,7 @@
 
 import UIKit
 import Factory
+import CEDomain
 
 @MainActor
 final class CurrencyConverterViewModel {
@@ -43,7 +44,7 @@ final class CurrencyConverterViewModel {
     // MARK: - Exposed Methods
     func configureDataSource(collectionView: UICollectionView) {
         dataSource = BalanceDataSource(collectionView: collectionView) { collectionView, indexPath, itemIdentifier in
-            guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: CCBalanceCollectionViewCell.identifier, for: indexPath) as? CCBalanceCollectionViewCell else { return nil }
+            guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: CCBalanceCollectionViewCell.identifier, for: indexPath) as? CCBalanceCollectionViewCell else {  fatalError("Cell should be registered properly") }
             cell.configure(with: itemIdentifier)
             return cell
         }

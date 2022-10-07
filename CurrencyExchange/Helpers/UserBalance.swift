@@ -6,6 +6,7 @@
 //
 
 import Factory
+import CEDomain
 import Foundation
 
 final class UserBalance {

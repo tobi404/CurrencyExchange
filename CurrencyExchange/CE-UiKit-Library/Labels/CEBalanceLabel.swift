@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import CEDomain
 
 final class CEBalanceLabel: CERestrictedUpdateLabel {
 

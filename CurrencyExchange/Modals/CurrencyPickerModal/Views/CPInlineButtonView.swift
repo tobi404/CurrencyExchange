@@ -11,6 +11,7 @@ import Factory
 import RxSwift
 import RxRelay
 import PanModal
+import CEDomain
 
 final class CPInlineButtonView: UIView {
 

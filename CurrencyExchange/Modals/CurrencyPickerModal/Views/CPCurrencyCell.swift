@@ -7,6 +7,7 @@
 
 import UIKit
 import SnapKit
+import CEDomain
 
 final class CPCurrencyCell: UITableViewCell {
 

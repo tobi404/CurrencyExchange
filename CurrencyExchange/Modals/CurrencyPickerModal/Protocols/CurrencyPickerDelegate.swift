@@ -5,6 +5,7 @@
 //  Created by Beka Demuradze on 05.10.22.
 //
 
+import CEDomain
 import Foundation
 
 protocol CurrencyPickerDelegate: AnyObject {

@@ -10,6 +10,7 @@ import SnapKit
 import RxSwift
 import RxRelay
 import Factory
+import CEDomain
 import ProgressHUD
 
 final class CCExchangeOperationFooterView: UICollectionReusableView {

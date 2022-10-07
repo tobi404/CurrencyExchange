@@ -10,6 +10,7 @@ import SnapKit
 import Factory
 import RxSwift
 import PanModal
+import CEDomain
 import ProgressHUD
 
 final class CurrencyPickerModalController: CEViewController {

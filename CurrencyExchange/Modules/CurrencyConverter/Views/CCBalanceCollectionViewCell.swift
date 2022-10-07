@@ -9,6 +9,7 @@ import UIKit
 import SnapKit
 import RxSwift
 import RxRelay
+import CEDomain
 
 final class CCBalanceCollectionViewCell: UICollectionViewCell {
 
