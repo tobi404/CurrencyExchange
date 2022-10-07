@@ -164,6 +164,7 @@
 		6D08A22028F0000200A36316 = {
 			isa = PBXGroup;
 			children = (
+				6DA3E6BF28F025D4001C2B6C /* README.md */,
 				6D08A22B28F0000200A36316 /* CurrencyExchange */,
 				6D08A24228F0000400A36316 /* CurrencyExchangeTests */,
 				6D08A22A28F0000200A36316 /* Products */,
@@ -183,7 +184,6 @@
 		6D08A22B28F0000200A36316 /* CurrencyExchange */ = {
 			isa = PBXGroup;
 			children = (
-				6DA3E6BF28F025D4001C2B6C /* README.md */,
 				6D08A23A28F0000400A36316 /* Info.plist */,
 				6D08A25C28F0003400A36316 /* AppSceneDelegate */,
 				6D08A26B28F0003400A36316 /* Resources */,
