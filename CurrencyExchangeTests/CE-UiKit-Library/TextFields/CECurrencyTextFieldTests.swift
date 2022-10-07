@@ -18,8 +18,8 @@ final class CECurrencyTextFieldTests: XCTestCase {
     }
 
     override func tearDownWithError() throws {
-        sut = nil
         try super.tearDownWithError()
+        sut = nil
     }
 
     func test_SettingValuePropertyChangesTextFieldText_12_42() {

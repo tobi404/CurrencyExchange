@@ -71,7 +71,7 @@ final class CurrencyConverterViewModel {
     }
 
     func getBalanceMaxAmount(for currency: any Currency) -> Decimal {
-        userBalance.getMaximumBalanceAmount(for: currency)
+        userBalance.getBalanceAmount(for: currency)
     }
 
     func getAvailableCurrencies() async throws -> [CurrencyEntity] {

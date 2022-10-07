@@ -46,7 +46,7 @@ final class UserBalance {
         getBalances()
     }
 
-    func getMaximumBalanceAmount(for currency: any Currency) -> Decimal {
+    func getBalanceAmount(for currency: any Currency) -> Decimal {
         guard let balance = getBalanceForCurrency(currency: currency) else { return 0 }
 
         return balance.amount

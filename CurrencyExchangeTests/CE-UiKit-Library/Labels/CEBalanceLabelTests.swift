@@ -19,8 +19,8 @@ final class CEBalanceLabelTests: XCTestCase {
     }
 
     override func tearDownWithError() throws {
-        sut = nil
         try super.tearDownWithError()
+        sut = nil
     }
 
     func test_InitialFontOfLabel_systemMedium24() {

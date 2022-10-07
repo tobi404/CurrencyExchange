@@ -13,8 +13,8 @@ final class CommissionCalculatorTests: XCTestCase {
     var sut: CommissionCalculator!
 
     override func tearDown() {
-        sut = nil
         super.tearDown()
+        sut = nil
     }
 
     func test_CommissionCalculatorSortsProcessorsByWeight() {

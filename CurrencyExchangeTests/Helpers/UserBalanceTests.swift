@@ -12,23 +12,27 @@ import Factory
 
 final class UserBalanceTests: XCTestCase {
 
+    fileprivate struct UseCaseMock: UserBalanceUseCaseInterface {
+        func getBalances() async throws -> [CEDomain.BalanceEntity] {
+            [
+                CEDomain.BalanceEntity(amount: 123.42, currency: CurrencyEntity.usdEntity)
+            ]
+        }
+    }
+
     var sut: UserBalance!
 
     override func setUp() {
         super.setUp()
         Container.Registrations.push()
-        Container.configureMocks()
+        Container.userBalanceUseCase.register(factory: { UseCaseMock() as UserBalanceUseCaseInterface })
         sut = UserBalance()
     }
 
     override func tearDown() {
-        sut = nil
-        Container.Registrations.pop()
         super.tearDown()
-    }
-
-    func test_BalanceFetchingImplementation() {
-        XCTAssert(sut.availableBalances.isEmpty == false)
+        Container.Registrations.pop()
+        sut = nil
     }
 
 }
