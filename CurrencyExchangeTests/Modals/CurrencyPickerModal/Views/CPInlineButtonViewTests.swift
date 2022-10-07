@@ -6,6 +6,7 @@
 //
 
 import XCTest
+@testable import CEDomain
 @testable import CurrencyExchange
 
 final class CPInlineButtonViewTests: XCTestCase {

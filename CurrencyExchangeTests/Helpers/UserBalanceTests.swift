@@ -7,6 +7,7 @@
 
 import XCTest
 import Factory
+@testable import CEDomain
 @testable import CurrencyExchange
 
 final class UserBalanceTests: XCTestCase {

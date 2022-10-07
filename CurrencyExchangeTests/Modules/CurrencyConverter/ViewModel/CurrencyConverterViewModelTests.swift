@@ -7,6 +7,8 @@
 
 import XCTest
 import Factory
+@testable import CECore
+@testable import CEDomain
 @testable import CurrencyExchange
 
 @MainActor

@@ -63,6 +63,8 @@
 		6D08A2EE28F001D600A36316 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 6D08A2ED28F001D600A36316 /* SnapKit */; };
 		6D08A2F128F001EE00A36316 /* Factory in Frameworks */ = {isa = PBXBuildFile; productRef = 6D08A2F028F001EE00A36316 /* Factory */; };
 		6D08A2F428F008A300A36316 /* CEAPP in Frameworks */ = {isa = PBXBuildFile; productRef = 6D08A2F328F008A300A36316 /* CEAPP */; };
+		6D829E6E28F0137000F9A583 /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = 6D829E6D28F0137000F9A583 /* RxCocoa */; };
+		6DA3E6BE28F0144A001C2B6C /* CurrencyEntityExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DA3E6BD28F0144A001C2B6C /* CurrencyEntityExtension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -127,6 +129,7 @@
 		6D08A2D228F0004A00A36316 /* CommissionProcessorTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommissionProcessorTests.swift; sourceTree = "<group>"; };
 		6D08A2D328F0004A00A36316 /* CommissionCalculatorTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommissionCalculatorTests.swift; sourceTree = "<group>"; };
 		6D08A2D428F0004A00A36316 /* UserBalanceTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserBalanceTests.swift; sourceTree = "<group>"; };
+		6DA3E6BD28F0144A001C2B6C /* CurrencyEntityExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CurrencyEntityExtension.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -149,6 +152,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6D829E6E28F0137000F9A583 /* RxCocoa in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -161,6 +165,7 @@
 				6D08A22B28F0000200A36316 /* CurrencyExchange */,
 				6D08A24228F0000400A36316 /* CurrencyExchangeTests */,
 				6D08A22A28F0000200A36316 /* Products */,
+				6D829E6628F010E200F9A583 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -191,6 +196,7 @@
 		6D08A24228F0000400A36316 /* CurrencyExchangeTests */ = {
 			isa = PBXGroup;
 			children = (
+				6DA3E6BC28F0143D001C2B6C /* Extensions */,
 				6D08A2C528F0004A00A36316 /* CE-UiKit-Library */,
 				6D08A2CF28F0004A00A36316 /* Helpers */,
 				6D08A2BF28F0004A00A36316 /* Modals */,
@@ -508,6 +514,21 @@
 			path = CommissionCalculator;
 			sourceTree = "<group>";
 		};
+		6D829E6628F010E200F9A583 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		6DA3E6BC28F0143D001C2B6C /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				6DA3E6BD28F0144A001C2B6C /* CurrencyEntityExtension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -549,9 +570,13 @@
 			buildRules = (
 			);
 			dependencies = (
+				6D829E6C28F0136500F9A583 /* PBXTargetDependency */,
 				6D08A24128F0000400A36316 /* PBXTargetDependency */,
 			);
 			name = CurrencyExchangeTests;
+			packageProductDependencies = (
+				6D829E6D28F0137000F9A583 /* RxCocoa */,
+			);
 			productName = CurrencyExchangeTests;
 			productReference = 6D08A23F28F0000400A36316 /* CurrencyExchangeTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
@@ -673,6 +698,7 @@
 				6D08A2DE28F0004A00A36316 /* UserBalanceTests.swift in Sources */,
 				6D08A2DC28F0004A00A36316 /* CommissionProcessorTests.swift in Sources */,
 				6D08A2DA28F0004A00A36316 /* CurrencyConverterViewModelTests.swift in Sources */,
+				6DA3E6BE28F0144A001C2B6C /* CurrencyEntityExtension.swift in Sources */,
 				6D08A2DB28F0004A00A36316 /* FormattersTests.swift in Sources */,
 				6D08A2D828F0004A00A36316 /* CEBalanceLabelTests.swift in Sources */,
 				6D08A2D928F0004A00A36316 /* CENavigationControllerTests.swift in Sources */,
@@ -689,6 +715,10 @@
 			isa = PBXTargetDependency;
 			target = 6D08A22828F0000200A36316 /* CurrencyExchange */;
 			targetProxy = 6D08A24028F0000400A36316 /* PBXContainerItemProxy */;
+		};
+		6D829E6C28F0136500F9A583 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			productRef = 6D829E6B28F0136500F9A583 /* RxCocoa */;
 		};
 /* End PBXTargetDependency section */
 
@@ -826,13 +856,12 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = J356PY45R2;
+				ENABLE_TESTING_SEARCH_PATHS = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = CurrencyExchange/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -840,9 +869,12 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = rocks.beka.CurrencyExchange;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -854,13 +886,12 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = J356PY45R2;
+				ENABLE_TESTING_SEARCH_PATHS = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = CurrencyExchange/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -868,9 +899,12 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = rocks.beka.CurrencyExchange;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
@@ -887,9 +921,13 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = rocks.beka.CurrencyExchangeTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CurrencyExchange.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/CurrencyExchange";
 			};
 			name = Debug;
@@ -907,9 +945,12 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = rocks.beka.CurrencyExchangeTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CurrencyExchange.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/CurrencyExchange";
 			};
 			name = Release;
@@ -1037,6 +1078,16 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 6D08A2F228F008A300A36316 /* XCRemoteSwiftPackageReference "CEAPP" */;
 			productName = CEAPP;
+		};
+		6D829E6B28F0136500F9A583 /* RxCocoa */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 6D08A2DF28F000F400A36316 /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxCocoa;
+		};
+		6D829E6D28F0137000F9A583 /* RxCocoa */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 6D08A2DF28F000F400A36316 /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxCocoa;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
