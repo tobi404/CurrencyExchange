@@ -22,8 +22,8 @@ final class UserBalanceTests: XCTestCase {
 
     var sut: UserBalance!
 
-    override func setUp() {
-        super.setUp()
+    override func setUp() async throws {
+        try await super.setUp()
         Container.Registrations.push()
         Container.userBalanceUseCase.register(factory: { UseCaseMock() as UserBalanceUseCaseInterface })
         sut = UserBalance()
@@ -35,4 +35,38 @@ final class UserBalanceTests: XCTestCase {
         sut = nil
     }
 
+    func test_GetBalanceAmountForUSDCurrency() {
+        // given
+        let outputAmount: Decimal = 123.42
+
+        // when
+        let amount = sut.getBalanceAmount(for: CurrencyEntity.usdEntity)
+
+        // then
+        XCTAssertEqual(outputAmount, amount)
+    }
+
+    func test_TopUpBalanceAmountForUSDCurrency() {
+        // given
+        let outputAmount: Decimal = 133.42
+
+        // when
+        sut.topUpFunds(amount: 10, currency: CurrencyEntity.usdEntity)
+        let amount = sut.getBalanceAmount(for: CurrencyEntity.usdEntity)
+
+        // then
+        XCTAssertEqual(outputAmount, amount, accuracy: 0.01)
+    }
+
+    func test_ReduceBalanceAmountForUSDCurrency() {
+        // given
+        let outputAmount: Decimal = 113.42
+
+        // when
+        sut.deductFunds(amount: 10, currency: CurrencyEntity.usdEntity)
+        let amount = sut.getBalanceAmount(for: CurrencyEntity.usdEntity)
+
+        // then
+        XCTAssertEqual(outputAmount, amount, accuracy: 0.01)
+    }
 }
