@@ -1,8 +1,8 @@
 //
 //  AppDelegate.swift
-//  CurrencyExchange
+//  CurrencyConverter
 //
-//  Created by Beka Demuradze on 07.10.22.
+//  Created by Beka Demuradze on 04.10.22.
 //
 
 import UIKit
