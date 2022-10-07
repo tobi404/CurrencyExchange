@@ -55,6 +55,13 @@
 		6D08A2DC28F0004A00A36316 /* CommissionProcessorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D08A2D228F0004A00A36316 /* CommissionProcessorTests.swift */; };
 		6D08A2DD28F0004A00A36316 /* CommissionCalculatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D08A2D328F0004A00A36316 /* CommissionCalculatorTests.swift */; };
 		6D08A2DE28F0004A00A36316 /* UserBalanceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D08A2D428F0004A00A36316 /* UserBalanceTests.swift */; };
+		6D08A2E128F000F400A36316 /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = 6D08A2E028F000F400A36316 /* RxCocoa */; };
+		6D08A2E328F000F400A36316 /* RxRelay in Frameworks */ = {isa = PBXBuildFile; productRef = 6D08A2E228F000F400A36316 /* RxRelay */; };
+		6D08A2E528F000F400A36316 /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 6D08A2E428F000F400A36316 /* RxSwift */; };
+		6D08A2E828F0010F00A36316 /* PanModal in Frameworks */ = {isa = PBXBuildFile; productRef = 6D08A2E728F0010F00A36316 /* PanModal */; };
+		6D08A2EB28F001B800A36316 /* ProgressHUD in Frameworks */ = {isa = PBXBuildFile; productRef = 6D08A2EA28F001B800A36316 /* ProgressHUD */; };
+		6D08A2EE28F001D600A36316 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 6D08A2ED28F001D600A36316 /* SnapKit */; };
+		6D08A2F128F001EE00A36316 /* Factory in Frameworks */ = {isa = PBXBuildFile; productRef = 6D08A2F028F001EE00A36316 /* Factory */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -126,6 +133,13 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6D08A2EB28F001B800A36316 /* ProgressHUD in Frameworks */,
+				6D08A2E828F0010F00A36316 /* PanModal in Frameworks */,
+				6D08A2F128F001EE00A36316 /* Factory in Frameworks */,
+				6D08A2E528F000F400A36316 /* RxSwift in Frameworks */,
+				6D08A2EE28F001D600A36316 /* SnapKit in Frameworks */,
+				6D08A2E328F000F400A36316 /* RxRelay in Frameworks */,
+				6D08A2E128F000F400A36316 /* RxCocoa in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -508,6 +522,15 @@
 			dependencies = (
 			);
 			name = CurrencyExchange;
+			packageProductDependencies = (
+				6D08A2E028F000F400A36316 /* RxCocoa */,
+				6D08A2E228F000F400A36316 /* RxRelay */,
+				6D08A2E428F000F400A36316 /* RxSwift */,
+				6D08A2E728F0010F00A36316 /* PanModal */,
+				6D08A2EA28F001B800A36316 /* ProgressHUD */,
+				6D08A2ED28F001D600A36316 /* SnapKit */,
+				6D08A2F028F001EE00A36316 /* Factory */,
+			);
 			productName = CurrencyExchange;
 			productReference = 6D08A22928F0000200A36316 /* CurrencyExchange.app */;
 			productType = "com.apple.product-type.application";
@@ -558,6 +581,13 @@
 				Base,
 			);
 			mainGroup = 6D08A22028F0000200A36316;
+			packageReferences = (
+				6D08A2DF28F000F400A36316 /* XCRemoteSwiftPackageReference "RxSwift" */,
+				6D08A2E628F0010F00A36316 /* XCRemoteSwiftPackageReference "PanModal" */,
+				6D08A2E928F001B800A36316 /* XCRemoteSwiftPackageReference "ProgressHUD" */,
+				6D08A2EC28F001D600A36316 /* XCRemoteSwiftPackageReference "SnapKit" */,
+				6D08A2EF28F001EE00A36316 /* XCRemoteSwiftPackageReference "Factory" */,
+			);
 			productRefGroup = 6D08A22A28F0000200A36316 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -911,6 +941,87 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		6D08A2DF28F000F400A36316 /* XCRemoteSwiftPackageReference "RxSwift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/ReactiveX/RxSwift";
+			requirement = {
+				kind = upToNextMinorVersion;
+				minimumVersion = 6.5.0;
+			};
+		};
+		6D08A2E628F0010F00A36316 /* XCRemoteSwiftPackageReference "PanModal" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/slackhq/PanModal.git";
+			requirement = {
+				kind = upToNextMinorVersion;
+				minimumVersion = 1.2.0;
+			};
+		};
+		6D08A2E928F001B800A36316 /* XCRemoteSwiftPackageReference "ProgressHUD" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/relatedcode/ProgressHUD";
+			requirement = {
+				kind = upToNextMinorVersion;
+				minimumVersion = 13.6.0;
+			};
+		};
+		6D08A2EC28F001D600A36316 /* XCRemoteSwiftPackageReference "SnapKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SnapKit/SnapKit";
+			requirement = {
+				kind = upToNextMinorVersion;
+				minimumVersion = 5.6.0;
+			};
+		};
+		6D08A2EF28F001EE00A36316 /* XCRemoteSwiftPackageReference "Factory" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/hmlongco/Factory";
+			requirement = {
+				kind = upToNextMinorVersion;
+				minimumVersion = 1.2.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		6D08A2E028F000F400A36316 /* RxCocoa */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 6D08A2DF28F000F400A36316 /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxCocoa;
+		};
+		6D08A2E228F000F400A36316 /* RxRelay */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 6D08A2DF28F000F400A36316 /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxRelay;
+		};
+		6D08A2E428F000F400A36316 /* RxSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 6D08A2DF28F000F400A36316 /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxSwift;
+		};
+		6D08A2E728F0010F00A36316 /* PanModal */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 6D08A2E628F0010F00A36316 /* XCRemoteSwiftPackageReference "PanModal" */;
+			productName = PanModal;
+		};
+		6D08A2EA28F001B800A36316 /* ProgressHUD */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 6D08A2E928F001B800A36316 /* XCRemoteSwiftPackageReference "ProgressHUD" */;
+			productName = ProgressHUD;
+		};
+		6D08A2ED28F001D600A36316 /* SnapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 6D08A2EC28F001D600A36316 /* XCRemoteSwiftPackageReference "SnapKit" */;
+			productName = SnapKit;
+		};
+		6D08A2F028F001EE00A36316 /* Factory */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 6D08A2EF28F001EE00A36316 /* XCRemoteSwiftPackageReference "Factory" */;
+			productName = Factory;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 6D08A22128F0000200A36316 /* Project object */;
 }
