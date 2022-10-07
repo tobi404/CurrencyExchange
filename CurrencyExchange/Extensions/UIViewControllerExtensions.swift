@@ -14,9 +14,9 @@ extension UIViewController {
     }
 
     // MARK: - Tap to dismiss keyboard gesture
-    internal func registerDismissTapGesture() {
+    internal func registerDismissTapGesture(cancelsTouchesInView: Bool = false) {
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(dismissKeyboard))
-        tapGesture.cancelsTouchesInView = false
+        tapGesture.cancelsTouchesInView = cancelsTouchesInView
         view.addGestureRecognizer(tapGesture)
     }
 

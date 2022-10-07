@@ -115,13 +115,17 @@ final class CCExchangeOperationFooterView: UICollectionReusableView {
             .disposed(by: bag)
 
         currencyTextField.rx.controlEvent([.editingDidBegin])
-            .map({"CHECK"})
-            .bind(to: convertationButton.rx.title())
+            .bind(onNext: { [weak self] _ in
+                self?.convertationButton.setTitle("CHECK")
+                self?.convertationButton.isUserInteractionEnabled = false
+            })
             .disposed(by: bag)
 
         currencyTextField.rx.controlEvent([.editingDidEnd])
-            .map({"SUBMIT"})
-            .bind(to: convertationButton.rx.title())
+            .bind(onNext: { [weak self] _ in
+                self?.convertationButton.setTitle("SUBMIT")
+                self?.convertationButton.isUserInteractionEnabled = true
+            })
             .disposed(by: bag)
     }
 
