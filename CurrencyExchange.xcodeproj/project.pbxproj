@@ -65,6 +65,7 @@
 		6D08A2F428F008A300A36316 /* CEAPP in Frameworks */ = {isa = PBXBuildFile; productRef = 6D08A2F328F008A300A36316 /* CEAPP */; };
 		6D829E6E28F0137000F9A583 /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = 6D829E6D28F0137000F9A583 /* RxCocoa */; };
 		6DA3E6BE28F0144A001C2B6C /* CurrencyEntityExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DA3E6BD28F0144A001C2B6C /* CurrencyEntityExtension.swift */; };
+		6DA3E6C028F025D4001C2B6C /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 6DA3E6BF28F025D4001C2B6C /* README.md */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -130,6 +131,7 @@
 		6D08A2D328F0004A00A36316 /* CommissionCalculatorTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommissionCalculatorTests.swift; sourceTree = "<group>"; };
 		6D08A2D428F0004A00A36316 /* UserBalanceTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserBalanceTests.swift; sourceTree = "<group>"; };
 		6DA3E6BD28F0144A001C2B6C /* CurrencyEntityExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CurrencyEntityExtension.swift; sourceTree = "<group>"; };
+		6DA3E6BF28F025D4001C2B6C /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -181,6 +183,7 @@
 		6D08A22B28F0000200A36316 /* CurrencyExchange */ = {
 			isa = PBXGroup;
 			children = (
+				6DA3E6BF28F025D4001C2B6C /* README.md */,
 				6D08A23A28F0000400A36316 /* Info.plist */,
 				6D08A25C28F0003400A36316 /* AppSceneDelegate */,
 				6D08A26B28F0003400A36316 /* Resources */,
@@ -632,6 +635,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6DA3E6C028F025D4001C2B6C /* README.md in Resources */,
 				6D08A2A328F0003400A36316 /* LaunchScreen.storyboard in Resources */,
 				6D08A2A228F0003400A36316 /* Assets.xcassets in Resources */,
 			);
